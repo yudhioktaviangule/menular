@@ -16,7 +16,7 @@ class CreateMaterisTable extends Migration
         Schema::create('materis', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->number('poin_lulus');
+            $table->integer('poin_lulus');
             $table->timestamps();
         });
     }
