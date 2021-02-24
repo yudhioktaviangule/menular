@@ -15,7 +15,9 @@ class CreateJadwalUjiansTable extends Migration
     {
         Schema::create('jadwal_ujians', function (Blueprint $table) {
             $table->id();
-            $table->datetime('tanggal_waktu');
+            $table->datetime('tanggal_ujian');
+            $table->datetime('tanggal_selesai');
+            $table->integer('waktu_ujian')->comment('Jumlah detik'); 
             $table->datetime('buka_regis');
             $table->datetime('tutup_regis');
             $table->string('tempat');

@@ -15,6 +15,8 @@ class CreateTipsTricksTable extends Migration
     {
         Schema::create('tips_tricks', function (Blueprint $table) {
             $table->id();
+            $table->longtext("tips");
+            $table->longtext("trick");
             $table->timestamps();
         });
     }
