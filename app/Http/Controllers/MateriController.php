@@ -32,7 +32,7 @@ class MateriController extends Controller{
     }
     public function store(){
         $request = $this->request; 
-        $post = $request->only('name');
+        $post = $request->only('name','poin_lulus');
         $materi = new Materi();
         $materi->fill($post);
         $materi->save();
@@ -40,12 +40,13 @@ class MateriController extends Controller{
     }
     public function update($id=''){
         $request = $this->request; 
-        $post = $request->only('name');
+        $post = $request->only('name','poin_lulus');
         $materi = Materi::find($id);
         if($materi==NULL):
             return redirect(route('materi.index'));
         endif;
         $materi->name=$post['name'];
+        $materi->poin_lulus=$post['poin_lulus'];
         $materi->save();
         return redirect(route('materi.index'));
     }

@@ -9,7 +9,7 @@
                     <div class="card-header">
                         <h3 class="card-title">Materi</h3>
                         <div class="card-tools">
-                            <a href="{{ route('quiz.halaman_utama',['sm'=>$cek->id]) }}" class="btn btn-sm bg-teal">
+                            <a href="{{ route('quiz.utama',['sm' => $data->id]) }}" class="btn btn-sm bg-teal">
                                 Kembali
                             </a>
                         </div>
@@ -21,7 +21,7 @@
                         <div class="card-body">
                             
                             <div class='form-group'>
-                                <label for=materi>Isi</label>
+                                <label for=materi>Soal</label>
                                 <textarea name="materi" id="editor" cols="30" rows="10" class="form-control"></textarea>
                             </div>
                         </div>

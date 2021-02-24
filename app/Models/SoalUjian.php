@@ -9,6 +9,10 @@ class SoalUjian extends Model
 {
     use HasFactory;
     protected $fillable=[
-        ''
+        'materi_id',
+        'bab_materi_id',
+        'jenis',
+        'isi',
+        'json',
     ];
 }

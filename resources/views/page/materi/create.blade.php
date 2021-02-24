@@ -15,11 +15,15 @@
                         </div>
                     </div>
                     <form action="{{route('materi.store')}}" method="POST">
-                    @csrf
+                        @csrf
                         <div class="card-body">
                             <div class='form-group'>
                                 <label for=materi>Materi</label>
                                 <input class='form-control form-control-sm' name='name' id='materi'>
+                            </div>
+                            <div class='form-group'>
+                                <label for=materi>Poin Min. Kelulusan</label>
+                                <input class='form-control form-control-sm' name='poin_lulus' id='materi' type='number'>
                             </div>
                         </div>
                         <div class="card-footer">

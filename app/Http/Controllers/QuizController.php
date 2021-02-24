@@ -16,6 +16,15 @@ class QuizController extends Controller{
     }
     public function create(){
         $request = $this->request; 
+        
+        if($request->sm==NULL){
+            return redirect(route('materi.index'));
+        }
+        $data=BabMateri::find($request->sm);
+        if($data==NULL){
+            return redirect(route('materi.index'));
+        }
+        return view('page.quiz.create',compact('data'));
     }
     public function show($id=''){
         $request = $this->request; 

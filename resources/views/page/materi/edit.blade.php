@@ -22,6 +22,10 @@
                                 <label for=materi>Materi</label>
                                 <input class='form-control form-control-sm' name='name' value="{{$data->name}}" id='materi'>
                             </div>
+                            <<div class='form-group'>
+                                <label for=materi>Poin Min. Kelulusan</label>
+                                <input class='form-control form-control-sm' name='poin_lulus' value="{{$data->poin_lulus}}" id='materi' type='number'>
+                            </div>
                         </div>
                         <div class="card-footer">
                             <button class="btn btn-primary">Save</button>
