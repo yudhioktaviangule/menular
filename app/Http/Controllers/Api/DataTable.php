@@ -9,6 +9,7 @@ use App\Models\Peserta;
 use App\Models\JadwalUjian;
 use DataTables AS DTB;
 use Illuminate\Support\Facades\View;
+use \Carbon\Carbon;
 class DataTable extends Controller
 {
     public function __construct() {
@@ -68,13 +69,14 @@ class DataTable extends Controller
         return $table->make();
     }
     public function dt_jadwal(){
-        $soal = JadwalUjian::get();
-
+        $sekarang = Carbon::now();
+        $soal = JadwalUjian::where('tanggal_selesai','>=',$sekarang)->get();
+        
         $table = DTB::of($soal)
                     ->addIndexColumn()
                     ->addColumn('aksi',function($row){
                         $data = json_decode($row);
-                        return View::make('page.peserta.buttons',compact('data'));
+                        return View::make('page.jadwal.buttons',compact('data'));
                     })
         ;
         return $table->make();

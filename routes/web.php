@@ -8,6 +8,7 @@ use App\Http\Controllers\SubMateriController;
 use App\Http\Controllers\SoalController;
 use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\QuizController;
+use App\Http\Controllers\JadwalController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,5 +23,6 @@ Route::resource('sub_materi', SubMateriController::class);
 Route::resource('soal', SoalController::class);
 Route::resource('peserta', PesertaController::class);
 Route::resource('quiz', QuizController::class);
+Route::resource('jadwal', JadwalController::class);
 Route::get('ban-peserta/{id}', [PesertaController::class,'ban'])->name('peserta.ban');
 Route::get('quiz.hal_utama/{sm}', [QuizController::class,'halaman_utama'])->name('quiz.utama');

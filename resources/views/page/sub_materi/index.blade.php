@@ -10,7 +10,7 @@
                         <h3 class="card-title">{{$cek->name}}</h3>
                         <div class="card-tools">
                             <a href="{{ route('sub_materi.create') }}?mt={{$cek->id}}" class="btn btn-sm btn-primary">
-                                Tambah Materi
+                                Tambah Sub Materi
                             </a>
                         </div>
                     </div>

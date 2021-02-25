@@ -1,10 +1,5 @@
-
-@if($data->aktif=='tidak')
-    <a href="{{ route('peserta.show',['pesertum'=>$data->id]) }}" class="btn btn-sm btn-primary">
-        <i class="fas fa-check"></i> Verifikasi
-    </a>
-@else
-    <a href="{{ route('peserta.ban',['id'=>$data->id]) }}" class="btn btn-sm btn-danger">
-        <i class="fas fa-times"></i> Banned
-    </a>
-@endif
+<div class="text-right">
+    <a href="{{route('jadwal.show',['jadwal'=>$data->id])}}" class="btn btn-primary btn-sm"><i class="fas fa-search"></i> Lihat</a>
+    <a href="{{route('jadwal.edit',['jadwal'=>$data->id])}}" class="btn btn-success btn-sm"><i class="fas fa-edit"></i> Edit</a>
+    <a href="#" onclick="hapus(`{{ route('jadwal.destroy',['jadwal'=>$data->id]) }}`)" class="btn btn-danger btn-sm"><i class="fas fa-times"></i> Hapus</a>
+</div>
