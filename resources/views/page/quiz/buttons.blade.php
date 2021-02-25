@@ -1,1 +1,1 @@
-a.btn.btn
+<a href="{{ route('quiz.show',['quiz'=>$data->id]) }}" class="btn btn-sm">Lihat</a>

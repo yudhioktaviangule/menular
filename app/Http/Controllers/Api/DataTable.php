@@ -47,7 +47,8 @@ class DataTable extends Controller
                         return View::make('isi',compact('var'));
                     })
                     ->addColumn('aksi',function($row){
-                        return 'aksi';
+                        $data = json_decode($row);
+                        return View::make('page.quiz.buttons',compact('data'));
                     })
                     ;
         return $table->make();
