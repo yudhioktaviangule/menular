@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\SoalUjian;
 use App\Models\Peserta;
+use App\Models\JadwalUjian;
 use DataTables AS DTB;
 use Illuminate\Support\Facades\View;
 class DataTable extends Controller
@@ -56,6 +57,18 @@ class DataTable extends Controller
     }
     public function dt_person(){
         $soal = Peserta::get();
+
+        $table = DTB::of($soal)
+                    ->addIndexColumn()
+                    ->addColumn('aksi',function($row){
+                        $data = json_decode($row);
+                        return View::make('page.peserta.buttons',compact('data'));
+                    })
+        ;
+        return $table->make();
+    }
+    public function dt_jadwal(){
+        $soal = JadwalUjian::get();
 
         $table = DTB::of($soal)
                     ->addIndexColumn()

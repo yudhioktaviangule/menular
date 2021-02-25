@@ -19,7 +19,7 @@
                                         <th>Tanggal Buka Registrasi</th>
                                         <th>Tanggal Tutup Registrasi</th>
                                         <th>Waktu(Menit)</th>
-                                        <th>Tempat</th>
+                                        <th>Jenis Try Out</th>
                                         <th class='text-right'>
                                             <div class="btn btn-sm btn-default">
                                                 <i class="fas fa-cog"></i>
@@ -60,7 +60,7 @@
                     {name:'tanggal_selesai',data:'tanggal_selesai'},
                     {name:'buka_regis',data:'buka_regis'},
                     {name:'tutup_regis',data:'tutup_regis'},
-                    {name:'tempat',data:'tempat'},
+                    {name:'jenis',data:'jenis'},
                     {name:'aksi',data:'aksi'},
                 ]
             })

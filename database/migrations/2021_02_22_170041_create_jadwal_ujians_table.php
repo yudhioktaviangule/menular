@@ -20,7 +20,7 @@ class CreateJadwalUjiansTable extends Migration
             $table->integer('waktu_ujian')->comment('Jumlah detik'); 
             $table->datetime('buka_regis');
             $table->datetime('tutup_regis');
-            $table->string('tempat')->default('Daring');
+            $table->string('jenis')->default('Daring');
             $table->timestamps();
         });
     }
