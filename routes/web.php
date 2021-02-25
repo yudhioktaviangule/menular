@@ -22,4 +22,5 @@ Route::resource('sub_materi', SubMateriController::class);
 Route::resource('soal', SoalController::class);
 Route::resource('peserta', PesertaController::class);
 Route::resource('quiz', QuizController::class);
+Route::get('ban-peserta/{id}', [PesertaController::class,'ban'])->name('peserta.ban');
 Route::get('quiz.hal_utama/{sm}', [QuizController::class,'halaman_utama'])->name('quiz.utama');

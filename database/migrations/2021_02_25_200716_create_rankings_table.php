@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJawabanSoalsTable extends Migration
+class CreateRankingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateJawabanSoalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jawaban_soals', function (Blueprint $table) {
+        Schema::create('rankings', function (Blueprint $table) {
             $table->id();
-            $table->integer('peserta_id');
             $table->integer('peserta_ujian_id');
-            $table->integer('soal_ujian_id');
-            $table->integer('point');
-            $table->string('jawaban');
-            $table->enum('jenis',['tryout','latihan']);
+            $table->integer('jadwal_ujian_id');
+            $table->integer('poin');
             $table->timestamps();
         });
     }
@@ -32,6 +29,6 @@ class CreateJawabanSoalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jawaban_soals');
+        Schema::dropIfExists('rankings');
     }
 }

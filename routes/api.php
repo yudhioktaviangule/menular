@@ -12,5 +12,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix'=>'datatable'],function(){
     Route::get('dt_soal/{jenis}/{materi_id}/{smateri_id}',[DataTable::class,'dt_soal'])->name('dtb.soal');
+    Route::get('dt_person',[DataTable::class,'dt_person'])->name('dtb.person');
 });
 Route::post("ckup",[FileCKManager::class,'upload'])->name('ck.up');
