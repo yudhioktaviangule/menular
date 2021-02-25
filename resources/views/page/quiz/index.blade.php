@@ -20,6 +20,8 @@
                                 <thead>
                                     <tr>
                                         <th>Soal Quiz</th>
+                                        <th>Jawaban</th>
+                                        <th>Poin Jawaban</th>
                                         <th class='text-right'>
                                             <div class="btn btn-sm btn-default">
                                                 <i class="fas fa-cog"></i>
@@ -44,6 +46,7 @@
     <script>
         $(document).ready(()=>{
             var obj; 
+            let token = `{{ Auth::user()->remember_token }}`;
             let url = `{{route('dtb.soal',[
                 'jenis' => 'q',
                 'materi_id' => 0,
@@ -52,7 +55,18 @@
             obj=$("#x").DataTable({
                 serverSide:true,
                 processing:true,
-                ajax:url,
+                ajax:{
+                    url:url,
+                    beforeSend:(xhr)=>{
+                        xhr.setRequestHeader('Authorization',`Bearer ${token}`)
+                    }
+                },
+                columns:[
+                    {name:'soal',data:'soal'},
+                    {name:'jawaban',data:'jawaban'},
+                    {name:'poin',data:'poin'},
+                    {name:'aksi',data:'aksi'},
+                ]
             })
         });
     </script>

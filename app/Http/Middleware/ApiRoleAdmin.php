@@ -23,6 +23,7 @@ class ApiRoleAdmin
             if($data==NULL):
                 return response()->json(['msg'=>'error, Invalid Authorization','error'=>403],403);    
             endif;
+            
             return $next($request);
         else:
             return response()->json(['msg'=>'error, Invalid Authorization','error'=>403],403);

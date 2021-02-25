@@ -20,7 +20,6 @@ class SubMateriController extends Controller{
         if($cek==NULL):
             return redirect()->back();
         endif;
-        
         $data = SubMateri::where('materi_id',$cek->id)->get();
         return view('page.sub_materi.index',compact('data','cek'));
     }
@@ -39,7 +38,6 @@ class SubMateriController extends Controller{
         $request = $this->request; 
         $data = SubMateri::find($id);
         if($data!=NULL):
-            
             $isi = json_decode($data->isi);
             $isi = $isi->materi;
             return view('page.sub_materi.show',compact('data','isi'));
@@ -66,8 +64,6 @@ class SubMateriController extends Controller{
         $submat->fill($post);
         $submat->save();
         return redirect(route('sub_materi.index')."?mt=$post[materi_id]");
-        
-
     }
     public function update($id=''){
         $request = $this->request; 

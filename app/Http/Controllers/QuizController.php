@@ -34,6 +34,15 @@ class QuizController extends Controller{
     }
     public function store(){
         $request = $this->request; 
+        $post = $request->input();
+        $post['json'] = json_encode($post['json']);
+        $p = json_decode(json_encode($post));
+        unset($post['_token']);
+        $soal = new Soal();
+        $soal->fill($post);
+        $soal->save();
+        return redirect(route('quiz.utama',['sm'=>$p->bab_materi_id]));
+
     }
     public function update($id=''){
         $request = $this->request; 
