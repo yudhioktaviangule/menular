@@ -19,6 +19,7 @@ class CreatePesertasTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('aktif',['ya','tidak']);
             $table->rememberToken();
             $table->timestamps();
         });
