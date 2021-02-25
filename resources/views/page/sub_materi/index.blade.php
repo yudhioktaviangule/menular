@@ -36,8 +36,9 @@
                                                 </p>
                                                 <p style='width:50%'>
                                                     @php
-                                                        $json = json_decode($value->isi);
+                                                    $json = json_decode($value->isi);
                                                     @endphp
+                                                   
                                                     {!!substr($json->materi,0,50)!!}...
                                                     <a href="{{route('sub_materi.show',['sub_materi'=>$value->id])}}">Selengkapnya</a>
                                                 </p>

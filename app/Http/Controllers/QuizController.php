@@ -28,6 +28,12 @@ class QuizController extends Controller{
     }
     public function show($id=''){
         $request = $this->request; 
+        $data = Soal::find($id);
+        if($data!=NULL):
+            $mat = $data->bab_materi_id;
+            $data->delete();
+            redirect(route('quiz.utama',['sm'=>$mat]));
+        endif;
     }
     public function edit($id=''){
         $request = $this->request; 

@@ -80,3 +80,9 @@ window.ckEdWUpd = (objectId)=>{
         window.cked = ed;
     })
 }
+window.ckEdNUpd = (objectId)=>{
+    ClassicEditor
+    .create( document.querySelector( objectId )).then(ed=>{
+        window.cked = ed;
+    })
+}

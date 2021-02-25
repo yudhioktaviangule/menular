@@ -1,1 +1,1 @@
-<a href="{{ route('quiz.show',['quiz'=>$data->id]) }}" class="btn btn-sm">Lihat</a>
+<a href="{{ route('quiz.show',['quiz'=>$data->id]) }}" class="btn btn-sm btn-danger">Hapus</a>

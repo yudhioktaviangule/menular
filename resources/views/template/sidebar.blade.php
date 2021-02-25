@@ -7,14 +7,32 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="{{route('soal.index')}}" class="nav-link">
+            <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>Soal</p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" onclick="var f=()=>{$('#logout-form').submit()};f();" class="nav-link">
+            <a href="#" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
+                <p>Jadwal Ujian</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>Data Member</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>Verifikasi</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" onclick="var f=()=>{$('#logout-form').submit()};f();" class="nav-link">
+                <i class="nav-icon fas fa-sign-out-alt"></i>
                 <p>Log out</p>
             </a>
         </li>

@@ -41,7 +41,7 @@
     <script>
         $(document).ready(()=>{
             window.tk = `{{Auth::user()->remember_token}}`;
-            window.ckEdWUpd('#editor')
+            window.ckEdNUpd('#editor')
         });
     </script>
 @endsection

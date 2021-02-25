@@ -2088,6 +2088,12 @@ window.ckEdWUpd = function (objectId) {
   });
 };
 
+window.ckEdNUpd = function (objectId) {
+  _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default().create(document.querySelector(objectId)).then(function (ed) {
+    window.cked = ed;
+  });
+};
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
