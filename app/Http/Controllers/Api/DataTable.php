@@ -14,7 +14,7 @@ use \Carbon\Carbon;
 class DataTable extends Controller
 {
     public function __construct() {
-        $this->middleware('apion');
+       // $this->middleware('apion');
     }
     public function dt_soal($jenis,$materi,$submateri)
     {

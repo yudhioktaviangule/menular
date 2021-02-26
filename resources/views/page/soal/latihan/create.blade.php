@@ -1,5 +1,5 @@
 @extends("template.index")
-@section("title","Materi")
+@section("title","Latihan")
 
 @section("content")
     <div class="container-fluid">
@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Materi</h3>
+                        <h3 class="card-title">Latihan</h3>
                         <div class="card-tools">
                             <a href="{{ route('soal_latihan.index') }}" class="btn btn-sm bg-teal">
                                 Kembali

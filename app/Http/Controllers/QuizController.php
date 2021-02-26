@@ -39,12 +39,12 @@ class QuizController extends Controller{
         $request = $this->request; 
     }
     public function store(){
-        $request = $this->request; 
-        $post = $request->input();
+        $request      = $this->request; 
+        $post         = $request->input();
         $post['json'] = json_encode($post['json']);
-        $p = json_decode(json_encode($post));
+        $p            = json_decode(json_encode($post));
         unset($post['_token']);
-        $post['jadwal_id']=0;
+        $post['jadwal_id'] = 0;
         $soal = new Soal();
         $soal->fill($post);
         $soal->save();

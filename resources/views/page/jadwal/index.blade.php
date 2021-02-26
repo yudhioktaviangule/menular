@@ -23,7 +23,7 @@
                                         <th>Tanggal Tutup Registrasi</th>
                                         <th>Waktu(Menit)</th>
                                         
-                                        <th style="width:240px" class='text-right'>
+                                        <th style="width:320px" class='text-right'>
                                             <div class="btn btn-sm btn-default">
                                                 <i class="fas fa-cog"></i>
                                             </div>
