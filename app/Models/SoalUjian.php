@@ -11,6 +11,7 @@ class SoalUjian extends Model
     protected $fillable=[
         'materi_id',
         'bab_materi_id',
+        'jadwal_id',
         'jenis',
         'isi',
         'json',

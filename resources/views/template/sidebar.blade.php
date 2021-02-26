@@ -13,9 +13,9 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('soal_latihan.index')}}" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
-                <p>Soal</p>
+                <p>Soal Latihan</p>
             </a>
         </li>
         <li class="nav-item">
@@ -24,9 +24,8 @@
                 <p>Jadwal Ujian</p>
             </a>
         </li>
-        
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('verif.index')}}" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>Verifikasi</p>
             </a>

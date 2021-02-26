@@ -17,7 +17,7 @@ class CreatePesertaUjiansTable extends Migration
             $table->id();
             $table->integer('jadwal_id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('password')->unique();
             $table->integer('verified_by')->default(0);
             $table->timestamps();

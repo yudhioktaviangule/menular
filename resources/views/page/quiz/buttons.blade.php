@@ -1,1 +1,1 @@
-<a href="{{ route('quiz.show',['quiz'=>$data->id]) }}" class="btn btn-sm btn-danger">Hapus</a>
+<a href="#" onclick="hapus(`{{route('soal_latihan.destroy',['soal_latihan'=>$data->id])}}`)" class="btn btn-sm btn-danger">Hapus</a>

@@ -79,5 +79,10 @@ class JadwalController extends Controller{
     }
     public function destroy($id){
         $request = $this->request;
+        $data = JadwalUjian::find($id);
+        if($data!=NULL):
+            $data->delete();
+        endif;
+        return redirect()->back();
     }
 }

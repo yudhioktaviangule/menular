@@ -44,6 +44,7 @@ class QuizController extends Controller{
         $post['json'] = json_encode($post['json']);
         $p = json_decode(json_encode($post));
         unset($post['_token']);
+        $post['jadwal_id']=0;
         $soal = new Soal();
         $soal->fill($post);
         $soal->save();
