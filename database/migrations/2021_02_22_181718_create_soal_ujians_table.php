@@ -17,10 +17,12 @@ class CreateSoalUjiansTable extends Migration
             $table->id();
             $table->integer('materi_id')->comment("0 jika jenis soal q(QUIZ)");
             $table->integer('bab_materi_id')->comment("0 jika jenis soal latihan atau tryout");
+            $table->integer('jadwal_id')->comment("0 latihan atau quiz");
             $table->enum('jenis',['q','latihan','tryout']);
             $table->longtext("isi");
             $table->longtext("json");
             $table->timestamps();
+            
         });
     }
 
