@@ -110,15 +110,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div id="delete"></div>
 </form>
 <input type="hidden" id="upd" value="{{ route('ck.up') }}">
-<script src="{{asset('public/assets/plugins/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('public/assets/plugins/datatables/jquery.dataTables.js')}}"></script>
-<script src="{{asset('public/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-<script src="{{asset('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('public/assets/plugins/moment/moment.min.js')}}"></script>
-<script src="{{asset('public/assets/plugins/moment/moment-with-locales.min.js')}}"></script>
+<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('assets/plugins/datatables/jquery.dataTables.js')}}"></script>
+<script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('assets/plugins/moment/moment.min.js')}}"></script>
+<script src="{{asset('assets/plugins/moment/moment-with-locales.min.js')}}"></script>
 
-<script src="{{asset('public/assets/dist/js/adminlte.min.js')}}"></script>
-<script src="{{asset('public/js/app.js')}}"></script>
+<script src="{{asset('assets/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 
 <script>
   $(document).ready(()=>{
