@@ -12,12 +12,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
-  <link rel="stylesheet" href="{{asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
-  <link rel="stylesheet" href="{{asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
-  <link rel="stylesheet" href="{{asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
-  <link rel="stylesheet" href="{{asset('assets/dist/css/adminlte.min.css')}}">
-  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{asset('public/assets/plugins/fontawesome-free/css/all.min.css')}}">
+  <link rel="stylesheet" href="{{asset('public/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('public/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('public/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="{{asset('public/assets/dist/css/adminlte.min.css')}}">
+  <link rel="stylesheet" href="{{asset('public/css/app.css')}}">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -44,13 +44,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </nav>
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="{{route('home')}}" class="brand-link">
-      <img src="{{ asset('assets/dist/img/mylogo.jpg') }}" alt="{{Auth::user()->outlet_name}}" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="{{ asset('public/assets/dist/img/mylogo.jpg') }}" alt="{{Auth::user()->outlet_name}}" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">{{config('app.name')}}</span>
     </a>
     <div class="sidebar">
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{asset('assets/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('public/assets/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="{{route('home')}}" class="d-block">{{Auth::user()->name}}</a>
@@ -110,15 +110,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div id="delete"></div>
 </form>
 <input type="hidden" id="upd" value="{{ route('ck.up') }}">
-<script src="{{asset('assets/plugins/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('assets/plugins/datatables/jquery.dataTables.js')}}"></script>
-<script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('assets/plugins/moment/moment.min.js')}}"></script>
-<script src="{{asset('assets/plugins/moment/moment-with-locales.min.js')}}"></script>
+<script src="{{asset('public/assets/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('public/assets/plugins/datatables/jquery.dataTables.js')}}"></script>
+<script src="{{asset('public/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
+<script src="{{asset('public/assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('public/assets/plugins/moment/moment.min.js')}}"></script>
+<script src="{{asset('public/assets/plugins/moment/moment-with-locales.min.js')}}"></script>
 
-<script src="{{asset('assets/dist/js/adminlte.min.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
+<script src="{{asset('public/assets/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('public/js/app.js')}}"></script>
 
 <script>
   $(document).ready(()=>{
