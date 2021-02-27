@@ -11,6 +11,7 @@ use App\Http\Controllers\PesertaController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\VerifikasiController;
+use App\Http\Controllers\TipsTrickController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,6 +29,7 @@ Route::resource('peserta', PesertaController::class);
 Route::resource('quiz', QuizController::class);
 Route::resource('jadwal', JadwalController::class);
 Route::resource('verif', VerifikasiController::class);
+Route::resource('trik', TipsTrickController::class);
 Route::get('ban-peserta/{id}', [PesertaController::class,'ban'])->name('peserta.ban');
 Route::get('quiz.hal_utama/{sm}', [QuizController::class,'halaman_utama'])->name('quiz.utama');
 Route::get('soal_ujian.hal_utama/{jadwal}', [SoalUjianController::class,'halaman_utama'])->name('soal_ujian.utama');

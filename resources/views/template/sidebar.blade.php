@@ -7,6 +7,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="{{ route('trik.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>Tips &amp; Trick</p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{route('materi.index')}}" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>Materi</p>
